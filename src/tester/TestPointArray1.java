@@ -84,22 +84,24 @@ public class TestPointArray1 {
 			System.out.println("4. Exit");
 			System.out.print("Enter your choice: ");
 			int choice = sc.nextInt();
+			sc.nextLine();
 			
 			switch(choice) {
 			
 			case 1: 
 				System.out.print("Enter Index: ");
 				int index = sc.nextInt();
+				
 				System.out.println("------Display co-ordinates------");
 				for(Point2D p : points) {
 					if(p == null) {
 						System.out.println("Empty");
-						break;
 					}
 				}
 				for(int i=0; i<count; i++) {
 					if(i == index) {
 						System.out.println("Co - ordinates of "+index+"is: "+points[index].getDetails());
+						break;
 					} else {
 						System.out.println(" Invalid index , pls retry!!!!");
 					}
